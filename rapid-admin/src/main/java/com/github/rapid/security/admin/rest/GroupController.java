@@ -36,13 +36,16 @@ public class GroupController extends BaseController<GroupBiz, Group> {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public List<Group> list(String name,String groupType) {
-        if(StringUtils.isBlank(name)&&StringUtils.isBlank(groupType))
+        if(StringUtils.isBlank(name)&&StringUtils.isBlank(groupType)) {
             return new ArrayList<Group>();
+        }
         Example example = new Example(Group.class);
-        if (StringUtils.isNotBlank(name))
+        if (StringUtils.isNotBlank(name)) {
             example.createCriteria().andLike("name", "%" + name + "%");
-        if (StringUtils.isNotBlank(groupType))
+        }
+        if (StringUtils.isNotBlank(groupType)) {
             example.createCriteria().andEqualTo("groupType", groupType);
+        }
 
         return baseBiz.selectByExample(example);
     }
@@ -100,13 +103,16 @@ public class GroupController extends BaseController<GroupBiz, Group> {
     @RequestMapping(value = "/tree", method = RequestMethod.GET)
     @ResponseBody
     public List<GroupTree> tree(String name, String groupType) {
-        if(StringUtils.isBlank(name)&&StringUtils.isBlank(groupType))
+        if(StringUtils.isBlank(name)&&StringUtils.isBlank(groupType)) {
             return new ArrayList<GroupTree>();
+        }
         Example example = new Example(Group.class);
-        if (StringUtils.isNotBlank(name))
+        if (StringUtils.isNotBlank(name)) {
             example.createCriteria().andLike("name", "%" + name + "%");
-        if (StringUtils.isNotBlank(groupType))
+        }
+        if (StringUtils.isNotBlank(groupType)) {
             example.createCriteria().andEqualTo("groupType", groupType);
+        }
         return  getTree(baseBiz.selectByExample(example), CommonConstant.ROOT);
     }
 

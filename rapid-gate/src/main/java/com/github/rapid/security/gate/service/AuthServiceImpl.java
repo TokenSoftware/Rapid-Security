@@ -65,8 +65,9 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public FrontUser getUserInfo(String token) {
         String username = jwtTokenUtil.getUsernameFromToken(token);
-        if(username==null)
+        if(username==null) {
             return null;
+        }
         UserInfo user = userService.getUserByUsername(username);
         FrontUser frontUser  = new FrontUser();
         BeanUtils.copyProperties(user,frontUser);

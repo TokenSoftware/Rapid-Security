@@ -71,8 +71,9 @@ public class EntityUtils {
 	}
 
 	public static <T> boolean isPKNotNull(T entity,String field){
-		if(!ReflectionUtils.hasField(entity, field))
+		if(!ReflectionUtils.hasField(entity, field)) {
 			return false;
+		}
 		Object value = ReflectionUtils.getFieldValue(entity, field);
 		return value!=null&&!"".equals(value);
 	}

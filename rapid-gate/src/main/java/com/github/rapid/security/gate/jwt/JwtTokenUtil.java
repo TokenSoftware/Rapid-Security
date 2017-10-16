@@ -32,9 +32,6 @@ public class JwtTokenUtil implements Serializable {
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
-//
-//    @Value("${gate.jwt.prefix}")
-//    private String prefix;
 
     public String getUsernameFromToken(String token) {
         String username;

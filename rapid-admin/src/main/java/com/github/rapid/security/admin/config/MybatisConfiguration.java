@@ -117,6 +117,7 @@ public class MybatisConfiguration implements EnvironmentAware {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 
+    @Override
     public void setEnvironment(Environment environment) {
         this.propertyResolver = new RelaxedPropertyResolver(environment, null);
         this.url = propertyResolver.getProperty("spring.datasource.url");

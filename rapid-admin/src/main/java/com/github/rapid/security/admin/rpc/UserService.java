@@ -64,8 +64,9 @@ public class UserService {
             info.setType(CommonConstant.RESOURCE_TYPE_MENU);
             info.setName(CommonConstant.RESOURCE_ACTION_VISIT);
             String uri = menu.getHref();
-            if(!uri.startsWith("/"))
-                uri = "/"+uri;
+            if(!uri.startsWith("/")) {
+                uri = "/" + uri;
+            }
             info.setUri(uri);
             info.setMethod(CommonConstant.RESOURCE_REQUEST_METHOD_GET);
             result.add(info

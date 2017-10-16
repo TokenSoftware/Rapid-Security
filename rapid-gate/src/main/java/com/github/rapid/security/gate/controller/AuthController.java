@@ -41,10 +41,11 @@ public class AuthController {
 
     @RequestMapping(value = "verify", method = RequestMethod.GET)
     public ResponseEntity<?> verify(String token,String resource){
-        if(authService.validate(token,resource))
+        if(authService.validate(token,resource)) {
             return ResponseEntity.ok(true);
-        else
+        } else {
             return ResponseEntity.status(401).body(false);
+        }
     }
 
     @RequestMapping(value = "invalid", method = RequestMethod.POST)
@@ -56,9 +57,10 @@ public class AuthController {
     @RequestMapping(value = "user", method = RequestMethod.GET)
     public ResponseEntity<?> getUserInfo(String token){
         FrontUser userInfo = authService.getUserInfo(token);
-        if(userInfo==null)
+        if(userInfo==null) {
             return ResponseEntity.status(401).body(false);
-        else
+        } else {
             return ResponseEntity.ok(userInfo);
+        }
     }
 }

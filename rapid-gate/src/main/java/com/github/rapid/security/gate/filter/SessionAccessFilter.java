@@ -77,8 +77,9 @@ public class SessionAccessFilter extends ZuulFilter {
         final String requestUri = request.getRequestURI().substring(zuulPrefix.length());
         final String method = request.getMethod();
         // 不进行拦截的地址
-        if (isStartWith(requestUri) || isContains(requestUri)|| isOAuth(requestUri))
+        if (isStartWith(requestUri) || isContains(requestUri)|| isOAuth(requestUri)) {
             return null;
+        }
         UserInfo user = getJWTUser(request);
         String username = null;
         if(user!=null) {
@@ -87,15 +88,17 @@ public class SessionAccessFilter extends ZuulFilter {
             ctx.addZuulRequestHeader("Authorization",
                     Base64Utils.encodeToString(user.getUsername().getBytes()));
             // 查找合法链接
-        } else
+        } else {
             setFailedRequest(JSON.toJSONString(new TokenErrorResponse("Token Forbidden!")), 200);
+        }
 
         List<PermissionInfo> permissionInfos = userService.getAllPermissionInfo();
         // 判断资源是否启用权限约束
         Collection<PermissionInfo> result = getPermissionInfos(requestUri, method, permissionInfos);
         if(result.size()>0){
-            if(username!=null)
+            if(username!=null) {
                 checkAllow(requestUri, method, ctx, username);
+            }
 
         }
         return null;
@@ -194,7 +197,7 @@ public class SessionAccessFilter extends ZuulFilter {
         } else{
             PermissionInfo[] pms =  result.toArray(new PermissionInfo[]{});
             PermissionInfo pm = pms[0];
-            if(!method.equals("GET")){
+            if(!"GET".equals(method)){
                 setCurrentUserInfoAndLog(ctx, username, pm);
             }
         }
@@ -208,8 +211,9 @@ public class SessionAccessFilter extends ZuulFilter {
     private boolean isContains(String requestUri) {
         boolean flag = false;
         for (String s : contain.split(",")) {
-            if (requestUri.contains(s))
+            if (requestUri.contains(s)) {
                 return true;
+            }
         }
         return flag;
     }
@@ -222,8 +226,9 @@ public class SessionAccessFilter extends ZuulFilter {
     private boolean isStartWith(String requestUri) {
         boolean flag = false;
         for (String s : startWith.split(",")) {
-            if (requestUri.startsWith(s))
+            if (requestUri.startsWith(s)) {
                 return true;
+            }
         }
         return flag;
     }
