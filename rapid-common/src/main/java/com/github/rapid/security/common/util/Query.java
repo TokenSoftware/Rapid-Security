@@ -20,8 +20,9 @@ public class Query extends LinkedHashMap<String, Object> {
         if(params.get("page")!=null) {
             this.page = Integer.parseInt(params.get("page").toString());
         }
-        if(params.get("limit")!=null)
+        if(params.get("limit")!=null) {
             this.limit = Integer.parseInt(params.get("limit").toString());
+        }
         this.remove("page");
         this.remove("limit");
     }

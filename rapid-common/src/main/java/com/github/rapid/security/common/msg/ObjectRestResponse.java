@@ -1,5 +1,9 @@
 package com.github.rapid.security.common.msg;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class ObjectRestResponse<T> extends BaseResponse {
 
     T data;

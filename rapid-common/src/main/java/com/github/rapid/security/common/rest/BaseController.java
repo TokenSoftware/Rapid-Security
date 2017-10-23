@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class BaseController<Biz extends BaseBiz,Entity> {
     @Autowired
     protected HttpServletRequest request;

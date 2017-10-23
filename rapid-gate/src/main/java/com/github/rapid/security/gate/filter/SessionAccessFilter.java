@@ -26,7 +26,11 @@ import javax.servlet.http.HttpSession;
 import java.net.URLEncoder;
 import java.util.*;
 import java.util.regex.Pattern;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Component
 @Slf4j
 public class SessionAccessFilter extends ZuulFilter {

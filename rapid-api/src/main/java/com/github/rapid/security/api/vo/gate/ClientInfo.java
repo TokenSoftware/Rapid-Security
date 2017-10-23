@@ -2,7 +2,11 @@ package com.github.rapid.security.api.vo.gate;
 
 import java.io.Serializable;
 import java.util.Date;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class ClientInfo implements Serializable{
     private Integer id;
 

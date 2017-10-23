@@ -1,7 +1,11 @@
 package com.github.rapid.security.api.vo.authority;
 
 import java.io.Serializable;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class PermissionInfo implements Serializable{
     private String code;
     private String type;

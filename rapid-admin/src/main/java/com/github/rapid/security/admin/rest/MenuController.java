@@ -44,8 +44,9 @@ public class MenuController extends BaseController<MenuBiz, Menu> {
     @ResponseBody
     public List<MenuTree> getTree(String title) {
         Example example = new Example(Menu.class);
-        if (StringUtils.isNotBlank(title))
+        if (StringUtils.isNotBlank(title)) {
             example.createCriteria().andLike("title", "%" + title + "%");
+        }
         return getMenuTree(baseBiz.selectByExample(example), CommonConstant.ROOT);
     }
 

@@ -9,13 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-
 /**
- * ${DESCRIPTION}
  *
- * @author wanghaobin
- * @create 2017-06-21 8:11
- */
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @FeignClient("admin-back")
 @RequestMapping("api")
 public interface IUserService {

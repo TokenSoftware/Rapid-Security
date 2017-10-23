@@ -3,10 +3,11 @@ package com.github.rapid.security.gate.vo;
 import com.github.rapid.security.api.vo.authority.PermissionInfo;
 
 import java.util.List;
-
 /**
- * Created by ace on 2017/8/22.
- */
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class FrontUser {
     public String id;
     public String username;

@@ -9,7 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Slf4j
 public class DBLog extends Thread {
     private static final Logger log = Logger.getLogger(DBLog.class);

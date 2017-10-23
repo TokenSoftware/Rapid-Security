@@ -1,7 +1,11 @@
 package com.github.rapid.security.common.msg;
 
 import java.util.List;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class TableResultResponse<T> extends BaseResponse {
 
     TableData<T> data;

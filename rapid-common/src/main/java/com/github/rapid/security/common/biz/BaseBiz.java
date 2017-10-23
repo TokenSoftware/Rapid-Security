@@ -12,7 +12,11 @@ import tk.mybatis.mapper.entity.Example;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 import java.util.Map;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public abstract class BaseBiz<M extends Mapper<T>, T> {
     @Autowired
     protected M mapper;

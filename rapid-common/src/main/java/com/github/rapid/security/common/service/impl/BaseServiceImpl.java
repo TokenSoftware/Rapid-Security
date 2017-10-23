@@ -5,7 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class BaseServiceImpl<M extends Mapper<T>, T> implements BaseService<T> {
     @Autowired
     protected M mapper;
