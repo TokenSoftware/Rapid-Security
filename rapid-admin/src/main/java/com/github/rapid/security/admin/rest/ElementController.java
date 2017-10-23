@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
-
 /**
- * ${DESCRIPTION}
- */
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Controller
 @RequestMapping("element")
 public class ElementController extends BaseController<ElementBiz, Element> {

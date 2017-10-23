@@ -1,15 +1,10 @@
 package com.github.rapid.security.admin.config;
 
-import static com.google.common.base.Predicates.or;
-import static springfox.documentation.builders.PathSelectors.regex;
-
 import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
-import org.springframework.web.context.request.async.DeferredResult;
-
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -22,8 +17,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * swagger配置项
- *
- */
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration extends WebMvcConfigurerAdapter implements EnvironmentAware {

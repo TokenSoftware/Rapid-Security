@@ -10,7 +10,6 @@ import com.github.rapid.security.admin.mapper.ResourceAuthorityMapper;
 import com.github.rapid.security.admin.mapper.UserMapper;
 import com.github.rapid.security.admin.vo.AuthorityMenuTree;
 import com.github.rapid.security.admin.vo.GroupUsers;
-import com.github.rapid.security.admin.entity.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +18,12 @@ import com.github.rapid.security.common.biz.BaseBiz;
 import org.springframework.util.StringUtils;
 
 import java.util.*;
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
+
 @Service
 public class GroupBiz extends BaseBiz<GroupMapper,Group>{
     @Autowired

@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.github.rapid.security.common.rest.BaseController;
 
 /**
- * ${DESCRIPTION}
  *
- * @author wanghaobin
- * @create 2017-06-08 11:51
- */
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Controller
 @RequestMapping("groupType")
 public class GroupTypeController extends BaseController<GroupTypeBiz,GroupType> {

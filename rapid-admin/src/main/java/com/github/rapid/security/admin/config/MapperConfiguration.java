@@ -9,6 +9,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Configuration
 @AutoConfigureAfter(MybatisConfiguration.class)
 public class MapperConfiguration implements EnvironmentAware {

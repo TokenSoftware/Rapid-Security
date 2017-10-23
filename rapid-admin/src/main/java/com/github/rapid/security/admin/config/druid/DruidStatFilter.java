@@ -9,8 +9,11 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 import java.io.IOException;
-
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @WebFilter(filterName="druidWebStatFilter",urlPatterns="/druid/*",
         initParams={
                 @WebInitParam(name="exclusions",value="*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*")// 忽略资源

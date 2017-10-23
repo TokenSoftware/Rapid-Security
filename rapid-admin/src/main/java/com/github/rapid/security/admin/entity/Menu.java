@@ -4,7 +4,11 @@ import com.github.rapid.security.admin.constant.CommonConstant;
 
 import java.util.Date;
 import javax.persistence.*;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Table(name = "base_menu")
 public class Menu {
     @Id

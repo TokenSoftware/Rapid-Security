@@ -5,6 +5,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 import javax.persistence.*;
 
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Table(name = "gate_log")
 public class GateLog {
     @Id

@@ -7,6 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
+
 @Service
 public class ElementBiz extends BaseBiz<ElementMapper,Element> {
     public List<Element> getAuthorityElementByUserId(String userId){

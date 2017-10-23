@@ -2,7 +2,11 @@ package com.github.rapid.security.admin.entity;
 
 import java.util.Date;
 import javax.persistence.*;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Table(name = "base_resource_authority")
 public class ResourceAuthority {
     @Id

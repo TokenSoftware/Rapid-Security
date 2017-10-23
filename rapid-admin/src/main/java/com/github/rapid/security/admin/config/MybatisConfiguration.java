@@ -23,22 +23,22 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 /**
- * mybatis 配置数据源类
- */
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Configuration
 @EnableTransactionManagement
 public class MybatisConfiguration implements EnvironmentAware {
 
 
     private RelaxedPropertyResolver propertyResolver;
-
     private String driveClassName;
     private String url;
     private String userName;
     private String password;
     private String xmlLocation;
     private String typeAliasesPackage;
-    /////////////////////druid参数///////////////////////////////////////////////////
     private String filters;
     private String maxActive;
     private String initialSize;
@@ -52,7 +52,6 @@ public class MybatisConfiguration implements EnvironmentAware {
     private String testOnReturn;
     private String poolPreparedStatements;
     private String maxOpenPreparedStatements;
-    //////////////////////////////////////////////////////////////////////////
 
     @Bean
     public DataSource druidDataSource() {

@@ -19,7 +19,11 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Controller
 @RequestMapping("menu")
 public class MenuController extends BaseController<MenuBiz, Menu> {

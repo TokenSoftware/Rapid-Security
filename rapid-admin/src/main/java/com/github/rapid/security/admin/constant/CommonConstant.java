@@ -1,8 +1,10 @@
 package com.github.rapid.security.admin.constant;
 
 /**
- * ${DESCRIPTION}
- */
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class CommonConstant {
     public final static int ROOT = -1;
     public final static int DEFAULT_GROUP_TYPE = 0;

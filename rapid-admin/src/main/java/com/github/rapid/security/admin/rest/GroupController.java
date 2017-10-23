@@ -25,7 +25,11 @@ import com.github.rapid.security.common.rest.BaseController;
 import com.github.rapid.security.common.util.TreeUtil;
 
 import tk.mybatis.mapper.entity.Example;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 @Controller
 @RequestMapping("group")
 @Api("群组模块")

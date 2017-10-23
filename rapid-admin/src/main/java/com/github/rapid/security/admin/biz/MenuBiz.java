@@ -8,6 +8,11 @@ import com.github.rapid.security.admin.mapper.MenuMapper;
 
 import java.util.List;
 
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 
 @Service
 public class MenuBiz extends BaseBiz<MenuMapper,Menu> {
