@@ -1,17 +1,16 @@
 package com.github.rapid.security.common.web;
 
 
-import org.apache.commons.io.IOUtils;
-
-import javax.servlet.ReadListener;
-import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
-import java.io.*;
 import java.util.Enumeration;
 import java.util.Map;
 import java.util.Vector;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class ParameterRequestWrapper extends HttpServletRequestWrapper {
 
     private Map params;

@@ -7,7 +7,6 @@ package com.github.rapid.security.common.bean;
 public class Page {
     int num;
     int size;
-
     public int getNum() {
         return num;
     }

@@ -30,8 +30,6 @@ public class PermissionInfo implements Serializable{
         this.name = name;
     }
 
-
-
     public String getMethod() {
         return method;
     }

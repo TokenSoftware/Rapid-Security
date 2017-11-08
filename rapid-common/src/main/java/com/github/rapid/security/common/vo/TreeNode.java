@@ -2,7 +2,11 @@ package com.github.rapid.security.common.vo;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *
+ * @author sun-abel
+ * @create 2017-10-23 下午6:38
+ **/
 public class TreeNode {
     protected int id;
     protected int parentId;

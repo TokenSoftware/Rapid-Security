@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 /**
- *
  * @author sun-abel
  * @create 2017-10-23 下午6:38
  **/
 @FeignClient("admin-back")
 @RequestMapping("api")
 public interface IUserService {
-  @RequestMapping(value = "/user/username/{username}", method = RequestMethod.GET)
-  public UserInfo getUserByUsername(@PathVariable("username") String username);
-  @RequestMapping(value = "/user/un/{username}/permissions", method = RequestMethod.GET)
-  public List<PermissionInfo> getPermissionByUsername(@PathVariable("username") String username);
-  @RequestMapping(value = "/permissions", method = RequestMethod.GET)
-  List<PermissionInfo> getAllPermissionInfo();
+    @RequestMapping(value = "/user/username/{username}", method = RequestMethod.GET)
+    public UserInfo getUserByUsername(@PathVariable("username") String username);
+
+    @RequestMapping(value = "/user/un/{username}/permissions", method = RequestMethod.GET)
+    public List<PermissionInfo> getPermissionByUsername(@PathVariable("username") String username);
+
+    @RequestMapping(value = "/permissions", method = RequestMethod.GET)
+    List<PermissionInfo> getAllPermissionInfo();
 }

@@ -5,7 +5,8 @@ spring:
         config:
             server:
                 git:
-                    uri: https://git.oschina.net/geek_qi/AG-Config.git
+                    uri: https://github.com/token01/rapid-config.git
+
 
 server:
     port: 8750 #启动端口
